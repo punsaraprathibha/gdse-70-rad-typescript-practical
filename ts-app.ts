@@ -62,11 +62,18 @@ testEnums();
 
 // Tuples
 function testTuples() {
-    let person: [string, number]
-        = ["Saman", 25];
-    console.log(person);
-    console.log(person[0]);
-    console.log(person[1]);
+    type NameAge = readonly [string, number];
+
+    let validPerson: NameAge  = ["Saman", 25];
+    // let invalidPerson: NameAge = [30, "Saman"]; // Invalid
+
+    console.log(validPerson);
+    // console.log(invalidPerson);
+
+    // validPerson.push(""); // This can't be done if tuple defined as readonly
+
+    console.log(validPerson);
+
 }
 testTuples();
 
