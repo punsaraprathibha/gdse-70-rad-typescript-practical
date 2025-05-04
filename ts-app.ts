@@ -1,10 +1,3 @@
-
-// function greet(name: string): string {
-//     return `Hello ${name}`;
-// }
-//
-// console.log(greet("Typescript"));
-
 // 1. Define/Declare a Variable (Variable Inference)
 function testVariableInference() {
     let count = 5;
@@ -16,17 +9,15 @@ function add(a: number, b: number) {
     return a + b;
 }
 
-// Array Related Inference
+// 3. Array Related Inference
 function testArrayInference(){
-    let animals
-        = ["Cat", "Dog", "Parrot"];
+    let animals = ["Cat", "Dog", "Parrot"];
 
-    let items
-        = [1, "", true];
+    let items = [1, "", true];
 }
 
 
-// Optional Parameters in Functions
+// 4. Optional Parameters in Functions
 function greet(name?: string) {
     if (name) {
         return `Hello ${name}!`;
@@ -38,7 +29,7 @@ console.log(greet("Saman"));
 console.log(greet());
 
 
-// Default Parameters
+// 5. Default Parameters
 function greetDefault(name: string = "Guest"):string {
     return `Hello ${name}`;
 }
@@ -46,7 +37,7 @@ function greetDefault(name: string = "Guest"):string {
 console.log(greetDefault("Saman"));
 console.log(greetDefault());
 
-// Enums
+// 6. Enums
 function testEnums() {
     // Enum Declaration
     enum Direction {
@@ -60,7 +51,7 @@ function testEnums() {
 }
 testEnums();
 
-// Tuples
+// 7. Tuples
 function testTuples() {
     type NameAge = readonly [string, number];
 
@@ -77,7 +68,7 @@ function testTuples() {
 }
 testTuples();
 
-// Generics with Functions
+// 8. Generics with Functions
 function testGenerics<T>(value: T): T {
     return value;
 }
@@ -88,7 +79,7 @@ let output2
 console.log(output1);
 console.log(output2);
 
-// Generics with Interfaces
+// 9. Generics with Interfaces
 function testGenericsWithInterface() {
     interface ApiResponse<T> {
         data: T;
@@ -103,8 +94,7 @@ function testGenericsWithInterface() {
 }
 testGenericsWithInterface();
 
-// Object-Oriented Features
-// in TS
+// 10. Object-Oriented Features in TS (interface, class, constructor, access modifiers, new, this, super keywords)
 interface Animal {
     run(): void;
 }
